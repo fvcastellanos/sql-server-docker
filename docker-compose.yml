@@ -1,0 +1,13 @@
+version: '2'
+services:
+  sql-server:
+    # image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-windows-express
+    environment: 
+    - ACCEPT_EULA=Y
+    - SA_PASSWORD=Telefono10
+    ports:
+    - "1433:1433"
+    volumes:
+    - D:/docker/sql-server-express/:C:/temp/
+    # - D:/docker/sql-server:/var/opt/mssql
